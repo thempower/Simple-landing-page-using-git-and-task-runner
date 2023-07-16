@@ -4,9 +4,10 @@
 /* VARIABLES DECLARATION */
 
 /* COLORS */
-$button-color: #fed136;
-$headers-color: #222222;
-$paragraph-color: #777777;
+$yellow-color: #fed136;
+$dark-color: #222222;
+$light-dark-color: #777777;
+$white-color: #ffffff;
 
 /* FONTS */
 
@@ -19,70 +20,168 @@ $sub-font: 'Roboto Slab', serif;
     padding: 0;
     box-sizing: border-box;
 }
+a {
+
+    text-decoration: none;
+}
+
+
+/* RESET */
 
 body {
     font-family: $main-font;
     font-size: 16px;
+    color: $dark-color;
 }
+/* GLOBAL */
+
+section {
+    padding: 120px 0;
+}
+h2 {
+    text-align: center;
+    font-family: $main-font;
+    font-size: 2.5rem;
+    color: $dark-color;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-style: italic;
+    font-size: 2.5rem;
+    color: $white-color;
+}
+/* STYLING */
+
+/* HELLO SECTION + NAVIGATION */
 .wrapper {
+<<<<<<< HEAD
     background-color: black
+=======
+    position:relative;
+    height: 100vh; /* ask about height 700px */
+    overflow: hidden;
+   
+}
+.background {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    z-index:-1;  
+>>>>>>> 342681504abd8b7f4e08774baaae3f423c1556c6
 }
 .container {
     max-width: 940px;
-    background-color: white;
-    
 }
-header {
-    height: 700px;
-  
+.header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
+header h3 {
+
+    letter-spacing: -3px;
+
+}
+span.header-title {
+    display: block;
+    font-size: 4.7rem;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    text-transform: capitalize;
+    color: $white-color;
+}
+.header a {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 65px;
+    background-color: $yellow-color;
+    transition: all .5s ease-in-out;
+}
+.header a:hover {
+    background-color: $white-color;
+    color: $yellow-color;
+    transition: .5s all ease-in-out;
+}
+.header a:hover .btn-text {
+    color: $yellow-color;
+}
+.header .btn-text {
+    text-decoration: none;
+    font-family: $main-font;
+    font-size: 1.2rem;
+    color: $white-color;
+    font-weight: bold;
+    transition: .5s all ease-in-out;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $yellow-color;
 }
 
 nav {
-    position: relative;
     display:flex;
+    padding-top: 50px;
     justify-content: space-between;
     align-items: center;
-    padding: 2em;
     background: transparent;
  }
  
- ul {
-     width: 55%;
+nav ul {
      display: flex;
-     justify-content: space-around;
+     justify-content: flex-end;
+     align-items: center;
      list-style: none;
  }
  
- nav ul li {
-     font-size: 1rem;
- 
+ nav li {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 35px;
  }
- a {
+ nav a {
+    font-family: $main-font;
      text-decoration: none;
-     font-size: 1.7rem;
+     font-size: 0.9rem;
      font-weight: bold;
-     color: var(--gold);
+     color: $white-color;
      padding: .2em;
      position: relative;
      letter-spacing: 2px;
+     transition: .5s all ease;
  }
  
- a::after {
-     content: '';
-     position: absolute;
-     bottom: 0px;
-     left: 0px;
-     width: 0%;
-     background-color: var(--gold);
-     height: .15em;
-     border-radius: 10px;
-     transition: 0.3s ease-in-out;
+ nav a:hover {
+    color: $yellow-color;
+    scale: 1.1;
  }
- 
- a:hover::after {
-     width: 100%;
+ nav a:focus{
+    color: $yellow-color;
+    scale: 1.1;
  }
+
+ /* SERVICE SECTION */
+
+ p.service-description { 
+    font-family: $sub-font;
+    font-size: 1rem;
+    font-weight: italic;
+    text-align: center;
+    color: $light-dark-color;
+    padding-bottom: 80px;
+}
  
  /*  Burger Styling */
  .burger {
@@ -91,19 +190,24 @@ nav {
      outline: none;
      cursor: pointer;
      display: none;
- 
  }
- 
- .line {
-     width: 3em;
-     height: .3em;
-     background: var(--gold);
-     margin: .7em;
-     border-radius: 20px;
-     transition: .3s ease-in-out;
-     
+
+ .col-md-4 h4 {
+
+    font-family: $main-font;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 25px 0;
  }
+ .col-md-4 i {
+    display: flex;
  
+    font-size: 2rem;
+    border: 3px solid $yellow-color;
+    border-radius: 50%;
+    justify-content: center;
+    color: $yellow-color;
+ }
  /* Media Queries */
  
  @media only screen and (max-width: 1000px) {
