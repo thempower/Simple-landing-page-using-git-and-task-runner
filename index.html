@@ -3,11 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT LINKS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;500&display=swap" rel="stylesheet">
+    <!-- CSS FILES -->
     <link rel="stylesheet" href="vendor/bootstrap-grid.css">
-    <link rel="stylesheet" href="sass/style.scss">
+    <link rel="stylesheet" href="css/style.css">
     <title>Golden</title>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <img class="background"src="images/moon.jpg" alt="moon" srcset="">
+        <div class="container">
+            <nav>
+                <h2 class="logo">Golden</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <button class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </nav>
+            <div class="header">
+                <header>
+                    <h3>Welcome To Our Studio Golden</h3>
+                    <span class="header-title">It's nice to meet you</span>
+                    <a href="#" target="#"><span class="btn-text">TELL ME MORE</span></a>
+                </header>
+            </div>
+        </div>
+    </div>
+    <section class="services">
+        <h2>SERVICES</h2>
+        <div class="container">
+            <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fa-solid fa-gift"></i>
+                    <h4>E-Commerce</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae erat nec orci semper efficitur sed sed mi. Proin auctor, lorem sed interdum malesuada, turpis diam congue ante, ut consequat.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h4>Responsive Web</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae erat nec orci semper efficitur sed sed mi. Proin auctor, lorem sed interdum malesuada, turpis diam congue ante, ut consequat.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-lock"></i>
+                    <h4>Web Security</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae erat nec orci semper efficitur sed sed mi. Proin auctor, lorem sed interdum malesuada, turpis diam congue ante, ut consequat.</p>
+                </div>
+            </div>
+        </div>
+    </sectiion>
+    <script>
+        const mobileNav = document.querySelector('ul');
+        const burgerIcon = document.querySelector('.burger');
+        
+        burgerIcon.addEventListener('click', function(){
+            mobileNav.classList.toggle('active');
+            burgerIcon.classList.toggle('active');
+        
+        })
+        
+        </script>
 </body>
 </html>
