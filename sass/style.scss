@@ -214,7 +214,25 @@ nav ul {
  .col-md-4 p {
     line-height: 2.5vh;
   }
+/* OUR PORTFOLIO SECTION */
 
+.portfolio, .portfolio .row {
+
+    background-color: red;
+}
+ 
+.portfolio .col-md-4 {
+    padding: 0px;
+    margin: 0 15px;
+    max-width: 300px;
+    background-color: white;
+    
+}
+.portfolio img {
+    width: 100%;
+    height:300px;
+    object-fit: cover;
+}
  
  /* Media Queries */
  
