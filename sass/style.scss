@@ -171,6 +171,7 @@ nav ul {
  /* SERVICE SECTION */
 
  p.service-description { 
+    width: 100%;
     font-family: $sub-font;
     font-size: 1rem;
     font-weight: italic;
@@ -182,7 +183,7 @@ nav ul {
  
  .col-md-4 h4 {
     font-family: $main-font;
-    font-size: 1.1rem;
+    font-sizeqqq: 1.1rem;
     text-align: center;
     padding: 25px 0;
  }
@@ -207,22 +208,24 @@ nav ul {
     line-height: 2.5vh;
   }
 /* OUR PORTFOLIO SECTION */
-
-.portfolio, .portfolio .row {
-
-    background-color: gray;
+.portfolio {
+    
+    background-color: #f7f7f7;
 }
 .portfolio .row {
-    display:flex;
-  
-    
- }
+    flex-wrap: no-wrap;
+    padding: 25px 0;
+
+}
+.portfolio h4 {
+    padding-top: 25px;
+    padding-bottom: 0;
+
+}
 .portfolio .col-md-4 {
-    display:flex;
-    margin: 0 20px;
-    justify-content: space-between;
     padding: 0px;
-    margin: 25px  0x;
+    margin: 0 15px;
+    max-width: 300px;
     background-color: white;
     
 }
@@ -231,20 +234,51 @@ nav ul {
     height:300px;
     object-fit: cover;
 }
-
+.portfolio p {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom:30px !important;
+    text-align: center; 
+}
+ 
 /* FOOTER */
+
 footer {
-    display: flex;
+
     height: 120px;
     padding: 40px;
-    display: flex;
-    margin: auto 0;
-    color: #ecf0f1;
-    padding: 48px 0; }
-  
+    background-color: white;
+}
 
 
-  
+.social-media-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 5px;  
+    background-color: black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+
+}
+
+.social-media-icon i {
+    color: white;
+    font-size:1rem; 
+}
+footer .row {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer h5 {
+    text-align: left;
+    font-size:0.9;
+    font-weight: normal;
+}
+
  /* Media Queries */
  
  @media only screen and (max-width: 1000px) {
@@ -299,10 +333,23 @@ footer {
  
  }
  
- @media only screen and (max-width: 760px) {
-     ul {
-         width: 100%;
-     }
- }
+ @media screen and (max-width: 480px) {
+    body {
+      font-size: 0.7rem;
+    }
+    .row {
+        flex-wrap: wrap;
+        
+  }}
+
+  @media screen and (max-width: 1050) {
+    body {
+      font-size: 0.9rem;
+    }
+    .row {
+        flex-wrap: wrap;
+        
+  }}
+
 
 
