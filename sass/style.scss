@@ -183,7 +183,7 @@ nav ul {
  
  .col-md-4 h4 {
     font-family: $main-font;
-    font-sizeqqq: 1.1rem;
+    font-size: 1.1rem;
     text-align: center;
     padding: 25px 0;
  }
@@ -279,77 +279,85 @@ footer h5 {
     font-weight: normal;
 }
 
- /* Media Queries */
- 
- @media only screen and (max-width: 1000px) {
-     ul {
- 
-         width: 100%;
-     }
-     
-     .logo {
-         height: 4.5em;
-         
-     }
-     
-     .burger {
-         display: block;
-         transition: .3s ease-in-out;   
-     }
- 
-     .burger.active .line:first-child {
-         transform: translateY(-300px);
-     }
- 
-     .burger.active .line:nth-child(2){
-         transform: rotate(-405deg) translateY(8px);
-     }
- 
-     .burger.active .line:nth-child(3){
-         transform: rotate(-320deg) translateY(-10px);
-     }
- 
-     ul {
-         position: absolute;
-         right: 0;
-         top: 10vh;
-         background-color: whitesmoke;
-         height: 90vh;
-         flex-direction: column;
-         text-align: center;
-         transform: translate(100%); 
-         transition: .3s ease-in-out;
-     }
- 
-     ul.active {
-         transform: translate(0%); 
- 
-     }
- 
-     a {
-         font-size: 2.5rem;
-         letter-spacing: 2px;
-     }
- 
- }
- 
- @media screen and (max-width: 480px) {
-    body {
-      font-size: 0.7rem;
+/*  Burger Styling */
+.burger {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+
+}
+
+.line {
+    width: 3em;
+    height: .3em;
+    background: var(--gold);
+    margin: .7em;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1000px) {
+    ul {
+
+        width: 100%;
     }
-    .row {
-        flex-wrap: wrap;
+    
+    .logo {
+        height: 4.5em;
         
-  }}
-
-  @media screen and (max-width: 1050) {
-    body {
-      font-size: 0.9rem;
     }
-    .row {
-        flex-wrap: wrap;
-        
-  }}
+    
+    .burger {
+        background-color: gray;
+        display: block;
+        transition: .3s ease-in-out; 
+        z-index: 1;  
+    }
 
+    .burger.active .line:first-child {
+        transform: translateY(-300px);
+        background-color: red;
+    }
 
+    .burger.active .line:nth-child(2){
+        transform: rotate(-405deg) translateY(8px);
+    }
 
+    .burger.active .line:nth-child(3){
+        transform: rotate(-320deg) translateY(-10px);
+    }
+
+    ul {
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background-color: whitesmoke;
+        height: 90vh;
+        flex-direction: column;
+        text-align: center;
+        transform: translate(100%); 
+        transition: .3s ease-in-out;
+    }
+
+    ul.active {
+        transform: translate(0%); 
+
+    }
+
+    a {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    ul {
+        width: 100%;
+    }
+}
