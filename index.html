@@ -20,9 +20,19 @@
     <div class="wrapper">
         <img class="background"src="images/moon.jpg" alt="moon" srcset="">
         <div class="container">
-            <nav>
-                <h2 class="logo">Golden</h2>
+            <nav class="navbar">
                 <ul>
+                    <li class="navbar-logo">Golden</li>
+                    <li class="navbar-toggle"><i class="fas fa-bars"></i></li>
+                    <li class="navbar-links"><a href="">Home</a></li>
+                    <li class="navbar-links"><a href="">Services</a></li>
+                    <li class="navbar-links"><a href="">Portfolio</a></li>
+                    <li class="navbar-links"><a href="">About</a></li>
+                    <li class="navbar-links"><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- <nav>
+                <h2 class="logo">Golden</h2>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
@@ -34,7 +44,7 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </button>
-            </nav>
+            </nav> -->
             <div class="header">
                 <header>
                     <h3>Welcome To Our Studio Golden</h3>
@@ -131,15 +141,13 @@
         </div>
     </footer>
     <script>
-        const mobileNav = document.querySelector('ul');
-        const burgerIcon = document.querySelector('.burger');
-        
-        burgerIcon.addEventListener('click', function(){
-            mobileNav.classList.toggle('active');
-            burgerIcon.classList.toggle('active');
-        
-        })
-        
+        const toggleButton = document.getElementsByClassName('navbar-toggle')[0];
+        const navbarLinks = document.getElementsByClassName('navbar-links');    
+        toggleButton.addEventListener('click', function() {
+
+            for(var i=0; i<navbarLinks.length; i++)
+            navbarLinks[i].classList.toggle('active');
+        });
         </script>
 </body>
 </html> 

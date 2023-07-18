@@ -15,7 +15,7 @@ $main-font: 'Montserrat', sans-serif;
 $sub-font: 'Roboto Slab', serif;
 
 /* RESET */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -117,56 +117,106 @@ span.header-title {
     font-weight: bold;
     transition: .5s all ease-in-out;
 }
-.logo {
-    margin: 0;
-    padding: 0;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: $yellow-color;
+
+.navbar ul {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+
 }
 
-nav {
-    display:flex;
-    padding-top: 50px;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
- }
- 
-nav ul {
-     display: flex;
-     justify-content: flex-end;
-     align-items: center;
-     list-style: none;
- }
- 
- nav li {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 35px;
- }
- nav a {
-    font-family: $main-font;
-     text-decoration: none;
-     font-size: 0.9rem;
-     font-weight: bold;
-     color: $white-color;
-     padding: .2em;
-     position: relative;
-     letter-spacing: 2px;
-     transition: .5s all ease;
- }
- 
- nav a:hover {
+.navbar li {
+    list-style: none;
+    padding: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-logo {
+    flex: 1;
+    font-size: 1.5rem;
+    user-select: none;
     color: $yellow-color;
-    scale: 1.1;
- }
- nav a:focus{
+    font-size: $main-font;
+}
+.navbar-toggle {
+    display:none;
+}
+
+.navbar-links a {
+
+    transition: 0.5 all ease;
+
+}
+
+.navbar-links:hover a {
+
     color: $yellow-color;
-    scale: 1.1;
- }
+
+}
+    @media (max-width: 600px) {
+            .navbar ul {
+
+                flex-wrap: wrap;
+            }
+            .navbar-toggle {
+                display: block;
+            }
+            .navbar-links {
+               display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .active {
+            display: block;
+            }
+
+            .wrapper {
+
+                max-height: 500px;
+            }
+            header a {
+                display: none !important;
+            }
+            header h3, span.header-title {
+                display: none;
+            }
+            section {
+                margin: 0px;
+                padding: 30px 0;
+            }
+            .row {
+                flex-wrap: wrap;
+            }
+    }
+        @media (min-width:601px) and (max-width:1000px) {
+            body {
+
+                font-size: 1rem;
+                
+            }
+            h3 {
+                font-size: 3vh;
+                letter-spacing: 0;
+            }
+            span.header-title {
+
+                font-size: 5vh;
+            }
+            .wrapper {
+                max-height: 500px;
+            }
+            .row {
+                flex-wrap: wrap;
+            }
+        }
 
  /* SERVICE SECTION */
 
@@ -212,7 +262,7 @@ nav ul {
     
     background-color: #f7f7f7;
 }
-.portfolio .row {
+.row {
     flex-wrap: no-wrap;
     padding: 25px 0;
 
